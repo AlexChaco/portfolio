@@ -6,7 +6,13 @@ const social = [
   { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/ax-dev-code/" },
   { icon: <FaTwitter />, path: "https://twitter.com/AxDevCode" },
 ];
-const Socials = ({ containerStyle, iconStyle }: any) => {
+
+
+interface SocialsProps {
+  containerStyle: string;
+  iconStyle: string;
+}
+const Socials = ({ containerStyle, iconStyle }: SocialsProps) => {
   return (
     <div className={containerStyle}>
       {social.map((social, index) => {
