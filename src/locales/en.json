@@ -1,0 +1,22 @@
+{
+  "titleWebSite": "Ax Developer",
+  "descriptionWebSite": "Ax's developer portfolio",
+  "Nav": {
+    "contact": "Contact",
+    "resume": "Resume",
+    "work": "Work",
+    "services": "Services",
+    "HireMe": "Hire Me"
+  },
+  "title": "Software Engineer",
+  "hi": "Hello I'm",
+  "user": "Ax. Code",
+  "description": "Frontend and mobile developer with experience in React and React Native. I build interactive web and mobile apps, optimizing performance and user experience, always with clean and scalable code.",
+  "download": "Download CV",
+  "stats": {
+    "experience": "Years of Experience",
+    "projects": "Projects",
+    "technologies": "Technologies",
+    "commits": "Code Commits"
+  }
+}
