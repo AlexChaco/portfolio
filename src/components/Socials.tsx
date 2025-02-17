@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { ClassNameValue } from "tailwind-merge";
 
 const social = [
   { icon: <FaGithub />, path: "https://github.com/AxDev-Code" },
