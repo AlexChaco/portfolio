@@ -33,4 +33,9 @@ export const data = {
       value: 100,
     },
   },
+  social: {
+    linkedin: "https://www.linkedin.com/in/alexchaco/",
+    github: "https://github.com/AlexChaco",
+    twitter: "https://x.com/alxchaco",
+  }
 };
