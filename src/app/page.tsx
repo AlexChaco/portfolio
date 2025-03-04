@@ -8,7 +8,7 @@ import { data } from "@/lib/data";
 export default function Home() {
   
   return (
-    <section className="full-screen">
+    <section className="full-screen pt-20">
       <div className="container mx-auto h-full">
         <div className="flex flex-col  xl:flex-row justify-between items-center  xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
@@ -46,5 +46,6 @@ export default function Home() {
       </div>
       <Stats />
     </section>
+    
   );
 }

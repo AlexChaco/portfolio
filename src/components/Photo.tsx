@@ -8,7 +8,7 @@ const Photo = () => {
   return (
     <div className="w-full h-full relative">
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
         animate={{
           opacity: 1,
           transition: {
