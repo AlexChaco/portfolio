@@ -50,10 +50,12 @@ const Contact= () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500))
+      console.log(values)
       
       setFormStatus('success')
       form.reset()
     } catch (error) {
+      console.log(error)
       setFormStatus('error')
     } finally {
       setIsSubmitting(false)
