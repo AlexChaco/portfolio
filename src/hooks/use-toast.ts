@@ -18,12 +18,12 @@ type ToasterToast = ToastProps & {
   action?: ToastActionElement
 }
 
-const actionTypes = {
+ type ActionType = {
   ADD_TOAST: "ADD_TOAST",
   UPDATE_TOAST: "UPDATE_TOAST",
   DISMISS_TOAST: "DISMISS_TOAST",
   REMOVE_TOAST: "REMOVE_TOAST",
-} as const
+}
 
 let count = 0
 
@@ -31,9 +31,6 @@ function genId() {
   count = (count + 1) % Number.MAX_SAFE_INTEGER
   return count.toString()
 }
-/* eslint-disable @typescript-eslint/no-unused-vars */
-type ActionType = typeof actionTypes
-/* eslint-enable @typescript-eslint/no-unused-vars */
 
 type Action =
   | {
