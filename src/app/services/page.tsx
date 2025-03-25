@@ -5,9 +5,9 @@ import React from "react";
 const Services = () => {
   
   return (
-    <div>
-      Services page
-    </div>
+    <section className="full-screen pt-20">
+      
+    </section>
   );
 };
 

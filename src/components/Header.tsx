@@ -6,14 +6,10 @@ import MobileNav from "./MobileNav";
 import Image from "next/image";
 import { data } from "@/lib/data";
 
-
 const Header = () => {
   return (
-    <header className="py-8 xl:py-5 text-white fixed top-0 left-0 w-full z-50 ">
-            <link rel="icon" href="/favicon.ico" />
-
+    <header className="py-8 xl:py-5 text-white fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-primary to-[rgba(28,28,34,0.5)] ">
       <div className="container mx-auto flex justify-between items-center">
-
         <Link href="/">
           {/* <h1 className="text-4xl font-semibold">AX.</h1> */}
           <Image
