@@ -1,21 +1,11 @@
 import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
-import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import { data } from "@/lib/data";
 
 export default function Home() {
-  const handleDownload = () => {
-    const pdfUrl = "/assets/pdf/ALEXCHACO.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.setAttribute("download", "ALEXCHACO.pdf");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
 
-  };
   return (
     <section className="full-screen pt-20">
       <div className="container mx-auto h-full">
