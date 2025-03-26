@@ -6,7 +6,16 @@ import { FiDownload } from "react-icons/fi";
 import { data } from "@/lib/data";
 
 export default function Home() {
-  
+  const handleDownload = () => {
+    const pdfUrl = "/assets/pdf/ALEXCHACO.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.setAttribute("download", "ALEXCHACO.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+  };
   return (
     <section className="full-screen pt-20">
       <div className="container mx-auto h-full">
@@ -23,14 +32,14 @@ export default function Home() {
 
             {/** social media */}
             <div className="flex flex-col  xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2 text-black"
+              <a
+                href="/assets/pdf/ALEXCHACO.pdf"
+                download="CV_ALEX_CHACO.pdf"
+                className="uppercase flex items-center gap-2 text-black  px-4 py-2 rounded hover:bg-primary hover:border hover:border-white bg-accent hover:text-white"
               >
-                <span>{data.download}</span>
+                <span>Descargar</span>
                 <FiDownload className="text-xl" />
-              </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Socials
                   containerStyle="flex gap-6"
@@ -46,6 +55,6 @@ export default function Home() {
       </div>
       <Stats />
     </section>
-    
+
   );
 }
