@@ -65,6 +65,7 @@ export default function ContactInfo() {
             <div className="mr-4 p-3 rounded-full bg-primary/10">{item.icon}</div>
             <div>
               <h3 className="font-medium text-lg">{item.title}</h3>
+              <p className="text-muted-foreground mt-1">{item.content}</p>
               {item.link && (
                 <a
                   href={item.link}
