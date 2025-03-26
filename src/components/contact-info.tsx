@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, MapPin, Phone, Clock } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function ContactInfo() {
@@ -46,14 +46,6 @@ export default function ContactInfo() {
       link: "tel:+34123456789",
       linkText: null,
     },
-    {
-      icon: <Clock className="h-5 w-5 text-primary" />,
-      title: "Horario de Atención",
-      content: "Lunes a Viernes: 9:00 - 18:00",
-      secondaryContent: "Sábados: 10:00 - 14:00",
-      link: null,
-      linkText: null,
-    },
   ]
 
   return (
@@ -73,8 +65,6 @@ export default function ContactInfo() {
             <div className="mr-4 p-3 rounded-full bg-primary/10">{item.icon}</div>
             <div>
               <h3 className="font-medium text-lg">{item.title}</h3>
-              <p className="text-muted-foreground mt-1">{item.content}</p>
-              {item.secondaryContent && <p className="text-muted-foreground">{item.secondaryContent}</p>}
               {item.link && (
                 <a
                   href={item.link}

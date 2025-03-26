@@ -32,10 +32,6 @@ const Contact = () => {
         animate="visible"
         variants={containerVariants}
       >
-        <motion.h1 className="text-4xl font-bold tracking-tight mb-8 text-center" variants={itemVariants}>
-          Contáctanos
-        </motion.h1>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div variants={itemVariants}>
             <ContactInfo />
