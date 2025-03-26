@@ -171,7 +171,7 @@ const Contact= () => {
                         {...field} 
                         onFocus={() => setFocusedField('nombre')}
                         onBlur={() => setFocusedField(null)}
-                        className="border-2 focus:border-primary transition-all duration-300"
+                        className="border-2 focus:border-primary transition-all duration-300 text-black"
                       />
                     </motion.div>
                   </FormControl>
@@ -197,7 +197,7 @@ const Contact= () => {
                         {...field} 
                         onFocus={() => setFocusedField('email')}
                         onBlur={() => setFocusedField(null)}
-                        className="border-2 focus:border-primary transition-all duration-300"
+                        className="border-2 focus:border-primary transition-all duration-300 text-black" 
                       />
                     </motion.div>
                   </FormControl>
@@ -223,7 +223,7 @@ const Contact= () => {
                       {...field} 
                       onFocus={() => setFocusedField('telefono')}
                       onBlur={() => setFocusedField(null)}
-                      className="border-2 focus:border-primary transition-all duration-300"
+                      className="border-2 focus:border-primary transition-all duration-300 text-black"
                     />
                   </motion.div>
                 </FormControl>
@@ -248,7 +248,7 @@ const Contact= () => {
                       {...field} 
                       onFocus={() => setFocusedField('asunto')}
                       onBlur={() => setFocusedField(null)}
-                      className="border-2 focus:border-primary transition-all duration-300"
+                      className="border-2 focus:border-primary transition-all duration-300 text-black"
                     />
                   </motion.div>
                 </FormControl>
@@ -270,7 +270,7 @@ const Contact= () => {
                   >
                     <Textarea 
                       placeholder="Escribe tu mensaje aquí..." 
-                      className="min-h-[150px] border-2 focus:border-primary transition-all duration-300" 
+                      className="min-h-[150px] border-2 focus:border-primary transition-all duration-300 text-black" 
                       {...field} 
                       onFocus={() => setFocusedField('mensaje')}
                       onBlur={() => setFocusedField(null)}

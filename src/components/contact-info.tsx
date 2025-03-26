@@ -25,32 +25,26 @@ export default function ContactInfo() {
   }
 
   const infoItems = [
-    {
-      icon: <MapPin className="h-5 w-5 text-primary" />,
-      title: "Ubicación",
-      content: "Calle Principal 123, Ciudad, País",
-      link: "https://maps.google.com/?q=Calle+Principal+123",
-      linkText: "Ver en mapa",
-    },
+
     {
       icon: <Mail className="h-5 w-5 text-primary" />,
       title: "Correo Electrónico",
-      content: "contacto@ejemplo.com",
+      content: "axchacoh@gmail.com",
       link: "mailto:contacto@ejemplo.com",
       linkText: null,
     },
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
       title: "Teléfono",
-      content: "+34 123 456 789",
-      link: "tel:+34123456789",
+      content: "+51 949 240 682",
+      link: "tel:+5149240682",
       linkText: null,
     },
   ]
 
   return (
     <motion.div className="space-y-8" variants={containerVariants} initial="hidden" animate="visible">
-      <motion.h2 className="text-2xl font-semibold mb-6" variants={itemVariants}>
+      <motion.h2 className="text-2xl font-semibold mb-4" variants={itemVariants}>
         Información de Contacto
       </motion.h2>
 

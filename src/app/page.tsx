@@ -26,7 +26,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="lg"
-                className="uppercase flex items-center gap-2"
+                className="uppercase flex items-center gap-2 text-black"
               >
                 <span>{data.download}</span>
                 <FiDownload className="text-xl" />

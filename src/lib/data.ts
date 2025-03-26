@@ -4,9 +4,9 @@ export const data = {
   Nav: {
     home: "Inicio",
     contact: "Contacto",
-    resume: "Currículum",
-    work: "Trabajo",
-    services: "Servicios",
+    experience: "Experiencia",
+    projects: "Proyectos",
+    tecnologias: "Tecnologias",
     HireMe: "Contrátame",
   },
   title: "Ingeniero de Software",

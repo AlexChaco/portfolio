@@ -7,9 +7,9 @@ import { data } from "@/lib/data";
 
 const links = [
   { name: data.Nav.home ,path: "/" },
-  { name: data.Nav.services, path: "/services" },
-  { name: data.Nav.resume, path: "/resume" },
-  { name: data.Nav.work, path: "/work" },
+  { name: data.Nav.tecnologias, path: "/tecnologias" },
+  { name: data.Nav.experience, path: "/experience" },
+  { name: data.Nav.projects, path: "/projects" },
   { name: data.Nav.contact, path: "/contact" },
 ];
 
