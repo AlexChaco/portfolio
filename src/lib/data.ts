@@ -22,11 +22,11 @@ export const data = {
     },
     projects: {
       name: "Proyectos",
-      value: 5,
+      value: 6,
     },
     technologies: {
       name: "Tecnologías",
-      value: 10,
+      value: 11,
     },
     commits: {
       name: "Commits de código",

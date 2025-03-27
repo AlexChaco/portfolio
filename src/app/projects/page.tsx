@@ -9,38 +9,39 @@ const projectsData = [
     title: "Portfolio Personal",
     description:
       "Sitio web personal desarrollado con Next.js y Tailwind CSS. Incluye secciones de experiencia, proyectos y tecnologías.",
-    image: "/assets/github.jpg?height=400&width=600",
+    image: "/assets/portafolio.png?height=400&width=600",
     technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/username/portfolio",
-    liveUrl: "https://portfolio.example.com",
-    isPrivate: false,
-  },
-  {
-    title: "App de Gestión de Tareas",
-    description:
-      "Aplicación web para gestionar tareas y proyectos personales. Incluye funcionalidades de arrastrar y soltar, etiquetas y filtros.",
-    image: "/assets/github.jpg?height=400&width=600",
-    technologies: ["React", "Redux", "Firebase", "Material UI"],
-    githubUrl: "https://github.com/username/task-manager",
-    liveUrl: "https://tasks.example.com",
+    githubUrl: null,
+    liveUrl: "www.axcoder.dev",
     isPrivate: true,
   },
   {
-    title: "E-commerce de Productos Artesanales",
+    title: "App de Sigge Facturacion",
     description:
-      "Tienda online para venta de productos artesanales con carrito de compras, pasarela de pagos y panel de administración.",
-    image: "/assets/github.jpg?height=400&width=600",
-    technologies: ["Next.js", "Stripe", "MongoDB", "Tailwind CSS"],
-    githubUrl: "https://github.com/username/artisan-shop",
-    liveUrl: "https://artisan.example.com",
-    isPrivate: false,
+      "Aplicación mobile para facturación de servicios de la empresa. Permite realizar compras  en tiempo real. Esta Proyecto fue desarrollado con React Native para la empresa IUVADE SRL",
+    image: "/assets/sigge.webp?height=400&width=600",
+    technologies: ["React Native", "Redux", "React Native Paper", "Material UI"],
+    githubUrl: null,
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.siggefact&hl=es_419',
+    isPrivate: true,
   },
   {
-    title: "API de Gestión de Contenidos",
+    title: "Calculadora de voz en JAVA",
     description:
-      "API RESTful para gestión de contenidos digitales con autenticación, roles y permisos. Documentación con Swagger.",
-    image: "/assets/github.jpg?height=400&width=600",
-    technologies: ["Node.js", "Express", "PostgreSQL", "JWT"],
+      "Calculadora de voz en JAVA, que permite realizar operaciones matematicas en tiempo real. Esta Proyecto fue desarrollado con JavaFX para reonocer la voz de los usuarios y colocar los resultados en una pantalla",
+    image: "/assets/java.png?height=400&width=600",
+    technologies: ["Java", "TalkingJava", "JavaFX"],
+    githubUrl: null,
+    liveUrl: null,
+    isPrivate: true,
+  },
+  {
+    title: "Grid de Fiesta Taurinas en JAVA",
+    description:
+      "Grid de Fiesta Taurinas en JAVA, que permite realizar operaciones matematicas en tiempo real. Esta Proyecto fue desarrollado con JavaFX para manejar a los toros matadores y lugares de la fiesta",
+    
+    image: "/assets/taurina.png?height=400&width=600",
+    technologies: ["Java", "JAVAFX", "MYSQL"],
     githubUrl: "https://github.com/username/cms-api",
     liveUrl: null,
     isPrivate: true,
@@ -123,6 +124,8 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex items-center gap-3 mt-4">
+                  {
+                  project.githubUrl&&
                   <a
                     href={project.githubUrl}
                     target="_blank"
@@ -131,7 +134,7 @@ const ProjectsSection = () => {
                   >
                     <Github className="h-4 w-4" />
                     {project.isPrivate ? "Privado" : "Ver código"}
-                  </a>
+                  </a>}
 
                   {project.liveUrl && (
                     <a

@@ -18,11 +18,11 @@ const stats = [
     text: data.stats.technologies.name,
 
   },
-  {
-    number: data.stats.commits.value,
-    text: data.stats.commits.name,
+  // {
+  //   number: data.stats.commits.value,
+  //   text: data.stats.commits.name,
 
-  },
+  // },
 ];
 
 const Stats = () => {
