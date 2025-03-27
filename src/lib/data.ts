@@ -1,5 +1,5 @@
 export const data = {
-  titleWebSite: "Ax Developer",
+  titleWebSite: "Alex Chaco - Desarrollador Full Stack",
   descriptionWebSite: "Portafolio de Ax como desarrollador",
   Nav: {
     home: "Inicio",
@@ -13,7 +13,7 @@ export const data = {
   hi: "Hola, soy",
   user: "Alex Chaco",
   description:
-    "Desarrollador frontend y móvil con experiencia en React y React Native. Creo aplicaciones web y móviles interactivas, optimizando el rendimiento y la experiencia de usuario, siempre con código limpio y escalable.",
+    "Desarrollador full stack con experiencia en React, React Native, Python, Django y Java. Creo aplicaciones web y móviles interactivas, optimizando el rendimiento y la experiencia de usuario, siempre con código limpio y escalable.",
   download: "Descargar CV",
   stats: {
     experience: {

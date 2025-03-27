@@ -6,14 +6,17 @@ import { data } from "@/lib/data";
 
 const stats = [
   {
+    code: 1,
     number: data.stats.experience.value,
     text: data.stats.experience.name,
   },
   {
+    code: 2,
     number: data.stats.projects.value,
     text: data.stats.projects.name,
   },
   {
+    code: 3,
     number: data.stats.technologies.value,
     text: data.stats.technologies.name,
 
@@ -33,6 +36,12 @@ const Stats = () => {
           stats.map((stat, index) => {
             return (
               <div key={index} className="flex-1 flex gap-4 items-center justify-center xl:justify-start">
+                {
+                  stat.code === 1 &&
+                  <p className={`leading-snug text-white/80 text-4xl xl:text-6x1`}>
+                  {'+'}
+                </p>
+                }
                 <CountUp
                   end={stat.number}
                   duration={5}

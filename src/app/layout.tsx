@@ -13,6 +13,9 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: data.titleWebSite,
   description: data.descriptionWebSite,
+  icons: {
+    icon: "/icon.ico", 
+  },
 };
 
 export default function RootLayout({
