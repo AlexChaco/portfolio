@@ -64,7 +64,7 @@ const TechnologiesSection = () => {
     },
   }
   return (
-    <section className="full-screen pt-20">
+    <section className="full-screen pt-24">
       <motion.div
         className="container mx-auto px-4 md:px-6"
         initial="hidden"

@@ -1,6 +1,6 @@
-"use client"
-import { motion } from "framer-motion"
-import { Briefcase, Calendar, Building, ExternalLink } from "lucide-react"
+"use client";
+import { motion } from "framer-motion";
+import { Briefcase, Calendar, Building, ExternalLink } from "lucide-react";
 
 // Datos de experiencia laboral separados para fácil modificación
 const experienceData = [
@@ -13,7 +13,7 @@ const experienceData = [
     achievements: [
       "Implementacio completa de los aplicativos principales.",
       "Conexion con Beacon mediante SDK exteriores",
-      "Uso de Redux para el control de cada aplicativo"
+      "Uso de Redux para el control de cada aplicativo",
     ],
   },
   {
@@ -28,8 +28,7 @@ const experienceData = [
       "Utilizacion de Cron y crontab",
     ],
   },
-
-]
+];
 
 const ExperienceSection = () => {
   const containerVariants = {
@@ -41,7 +40,7 @@ const ExperienceSection = () => {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -50,10 +49,10 @@ const ExperienceSection = () => {
       opacity: 1,
       transition: { type: "spring", stiffness: 100 },
     },
-  }
+  };
 
   return (
-    <section className="full-screen pt-20">
+    <section className="full-screen pt-24">
       <motion.div
         className="container mx-auto px-4 md:px-6"
         initial="hidden"
@@ -62,7 +61,8 @@ const ExperienceSection = () => {
       >
         <motion.div className="text-center mb-12" variants={itemVariants}>
           <p className="text-muted-foreground max-w-[700px] mx-auto">
-            Mi trayectoria profesional en el desarrollo de soluciones digitales y tecnológicas.
+            Mi trayectoria profesional en el desarrollo de soluciones digitales
+            y tecnológicas.
           </p>
         </motion.div>
 
@@ -74,7 +74,7 @@ const ExperienceSection = () => {
           {experienceData.map((experience, index) => (
             <motion.div
               key={`experience-${index}`}
-              className="relative mb-12 pl-16 md:pl-0 md:mb-16"
+              className="relative mb-8 pl-16 md:pl-0 md:mb-8"
               variants={itemVariants}
             >
               {/* Punto en la timeline - simplificado */}
@@ -83,11 +83,14 @@ const ExperienceSection = () => {
               {/* Tarjeta de experiencia */}
               <div
                 className={`bg-card rounded-lg shadow-sm p-6 border hover:shadow-md transition-shadow duration-300 
-                              ${index % 2 === 0 ? "md:mr-[50%] md:pr-8" : "md:ml-[50%] md:pl-8"} md:w-[calc(50%-20px)]`}
+                md:w-[calc(50%-20px)] 
+                ${index % 2 === 0 ? "md:mr-auto md:pr-1" : "md:ml-auto md:pl-8"}`}
               >
                 <div className="flex items-center gap-2 mb-2">
                   <Building className="h-5 w-5 text-primary flex-shrink-0" />
-                  <h3 className="text-xl font-semibold">{experience.company}</h3>
+                  <h3 className="text-xl font-semibold">
+                    {experience.company}
+                  </h3>
                 </div>
 
                 <div className="flex items-center gap-2 mb-2 text-primary-foreground">
@@ -119,8 +122,7 @@ const ExperienceSection = () => {
         </div>
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default ExperienceSection
-
+export default ExperienceSection;
