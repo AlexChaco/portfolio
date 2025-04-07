@@ -1,5 +1,9 @@
 {
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 100,
-  "chat.editor.wordWrap": "off"
+  "chat.editor.wordWrap": "off",
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore",
+  "dotnet.unitTestDebuggingOptions": {}
 }

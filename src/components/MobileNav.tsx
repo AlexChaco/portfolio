@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import React from "react";
 import { CiMenuFries } from "react-icons/ci";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import Image from "next/image";
 import { data } from "@/lib/data";
 
@@ -23,6 +23,8 @@ const MobileNav = () => {
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
+      <SheetTitle>Ax Developer</SheetTitle>
+
         <div className="mt-28 mb-36 flex justify-center items-center">
           <Link href="/">
             <Image
