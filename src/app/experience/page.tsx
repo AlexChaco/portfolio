@@ -1,123 +1,112 @@
 "use client";
 import { motion } from "framer-motion";
-import { Briefcase, Calendar, Building, ExternalLink } from "lucide-react";
+import { Briefcase, Calendar, Building, CheckCircle } from "lucide-react";
 
-// Datos de experiencia laboral separados para fácil modificación
 const experienceData = [
   {
     company: "IUVADE SRL",
-    position: "Desarrollador Mobile Junior",
+    position: "Desarrollador Frontend & Mobile (React / React Native)",
     period: "Febrero 2024 - Presente",
     description:
-      "Desarrollo de aplicaciones mobiles utilizando React-Native, Implementación de codigo escalables y optimización de rendimiento. ",
+      "Diseño, desarrollo y despliegue de soluciones digitales para web y mobile, asegurando escalabilidad, mantenibilidad y experiencia de usuario consistente.",
     achievements: [
-      "Implementacio completa de los aplicativos principales.",
-      "Conexion con Beacon mediante SDK exteriores",
-      "Uso de Redux para el control de cada aplicativo",
+      "Desarrollo de aplicaciones móviles en React Native con integración de SDKs externos (Bluetooth/Beacons)",
+      "Implementación de interfaces modernas y responsivas en React + Next.js con TailwindCSS",
+      "Uso de Redux para la gestión de estado global y patrones de arquitectura escalables",
+      "Despliegue del frontend en servidores y publicación de aplicaciones móviles en Google Play Store y Apple App Store",
+      "Colaboración directa con backend y diseño para garantizar coherencia entre web y mobile",
     ],
   },
   {
-    company: "Beryllium Developement Company",
-    position: "Desarrollador Backend",
+    company: "Beryllium Development Company",
+    position: "Desarrollador Backend (Python / Django)",
     period: "Enero 2024 - Abril 2024",
     description:
-      "Desarrollo de APIS de diversos proyectos para posteriormente son usando pro el frontend.",
+      "Desarrollo de APIs y servicios backend para proyectos empresariales, integrados con aplicaciones frontend y mobile.",
     achievements: [
-      "Paticipacion en +3 proyectos realizados en PYTHON/DJANGO",
-      "Creación de filtros, reportes(pdf, excel)",
-      "Utilizacion de Cron y crontab",
+      "Participación en más de 3 proyectos con Django, integrando lógica de negocio y autenticación",
+      "Creación de filtros personalizados y generación de reportes en PDF/Excel",
+      "Automatización de tareas programadas con Cron y crontab",
+      "Construcción y despliegue de entornos en servidores utilizando Docker",
     ],
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2, delayChildren: 0.2 },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 40, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 80, damping: 12 },
+  },
+};
+
+const ExperienceItem = ({ exp }: { exp: (typeof experienceData)[0] }) => (
+  <motion.div
+    variants={itemVariants}
+    whileHover={{ scale: 1.02 }}
+    className="relative flex flex-col gap-4 
+               bg-[#22222a] border border-accent/20 
+               p-6 rounded-xl shadow-md transition-all hover:shadow-accent/30"
+  >
+    {/* Encabezado */}
+    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+      <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+        <Building className="w-5 h-5 text-accent" /> {exp.company}
+      </h3>
+      <p className="text-gray-400 text-xs mt-0.5">{exp.period}</p>
+    </div>
+
+    {/* Cargo */}
+    <p className="text-accent font-medium">{exp.position}</p>
+
+    {/* Descripción corta */}
+    <p className="text-gray-300 text-sm leading-relaxed">{exp.description}</p>
+
+    {/* Logros */}
+    <ul className="mt-2 space-y-2">
+      {exp.achievements.map((a, i) => (
+        <li key={i} className="flex items-start gap-2 text-gray-400 text-sm">
+          <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+          {a}
+        </li>
+      ))}
+    </ul>
+  </motion.div>
+);
+
 const ExperienceSection = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 100 },
-    },
-  };
-
   return (
-    <section className="full-screen pt-24">
+    <section className="relative py-20 bg-primary">
       <motion.div
-        className="container mx-auto px-4 md:px-6"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
+        className="container mx-auto px-4 md:px-8 lg:px-16"
       >
-        <motion.div className="text-center mb-12" variants={itemVariants}>
-          <p className="text-muted-foreground max-w-[700px] mx-auto">
-            Mi trayectoria profesional en el desarrollo de soluciones digitales
-            y tecnológicas.
+        {/* Título */}
+        <motion.div className="text-center mb-16" variants={itemVariants}>
+          <h2 className="text-3xl md:text-4xl font-bold text-accent mb-4">
+            Experiencia Profesional
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Mi trayectoria desarrollando soluciones digitales y tecnológicas en
+            distintos entornos.
           </p>
         </motion.div>
 
-        <div className="relative mx-4 md:mx-auto md:max-w-3xl">
-          {/* Línea vertical de la timeline - ahora más visible */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-accent/20 -ml-0.5"></div>
-
-          {/* Experiencias */}
-          {experienceData.map((experience, index) => (
-            <motion.div
-              key={`experience-${index}`}
-              className="relative mb-8 pl-16 md:pl-0 md:mb-8"
-              variants={itemVariants}
-            >
-              {/* Punto en la timeline - simplificado */}
-              <div className="absolute left-8 md:left-1/2 top-0 w-4 h-4 rounded-full bg-accent border-2 border-background -ml-2"></div>
-
-              {/* Tarjeta de experiencia */}
-              <div
-                className={`bg-card rounded-lg shadow-sm p-6 border hover:shadow-md transition-shadow duration-300 
-                md:w-[calc(50%-20px)] 
-                ${index % 2 === 0 ? "md:mr-auto md:pr-1" : "md:ml-auto md:pl-8"}`}
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <Building className="h-5 w-5 text-primary flex-shrink-0" />
-                  <h3 className="text-xl font-semibold">
-                    {experience.company}
-                  </h3>
-                </div>
-
-                <div className="flex items-center gap-2 mb-2 text-primary-foreground">
-                  <Briefcase className="h-4 w-4 text-primary flex-shrink-0" />
-                  <span className="font-medium">{experience.position}</span>
-                </div>
-
-                <div className="flex items-center gap-2 mb-4 text-muted-foreground">
-                  <Calendar className="h-4 w-4 flex-shrink-0" />
-                  <span>{experience.period}</span>
-                </div>
-
-                <p className="mb-4">{experience.description}</p>
-
-                <div className="space-y-2">
-                  <h4 className="font-medium">Logros destacados:</h4>
-                  <ul className="space-y-1">
-                    {experience.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <ExternalLink className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-sm">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
+        {/* Items */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          {experienceData.map((exp, i) => (
+            <ExperienceItem key={i} exp={exp} />
           ))}
         </div>
       </motion.div>

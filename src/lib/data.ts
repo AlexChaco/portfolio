@@ -18,7 +18,7 @@ export const data = {
   stats: {
     experience: {
       name: "Años de experiencia",
-      value: 1,
+      value: 2,
     },
     projects: {
       name: "Proyectos",

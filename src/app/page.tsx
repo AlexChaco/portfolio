@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <section className="full-screen pt-24">
-      <div className="container mx-auto h-full">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col  xl:flex-row justify-between items-center  xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">{data.title}</span>
