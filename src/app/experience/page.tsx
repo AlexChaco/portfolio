@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Briefcase, Calendar, Building, CheckCircle } from "lucide-react";
+import { Building, CheckCircle } from "lucide-react";
 
 const experienceData = [
   {
