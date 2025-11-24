@@ -26,26 +26,16 @@ const projectsData = [
     isPrivate: true,
   },
   {
-    title: "Calculadora de voz en JAVA",
+    title: "App Sigeduca",
     description:
-      "Calculadora de voz en JAVA, que permite realizar operaciones matematicas en tiempo real. Esta Proyecto fue desarrollado con JavaFX para reonocer la voz de los usuarios y colocar los resultados en una pantalla",
-    image: "/assets/java.png?height=400&width=600",
-    technologies: ["Java", "TalkingJava", "JavaFX"],
+      "Aplicación para gestionar el proceso de enseñanza de la escuela. Permite gestionar los materiales, asignar alumnos y gestionar las clases. Esta Proyecto fue desarrollado con React Native para la empresa IUVADE SRL",
+    image: "/assets/sigeduca.webp?height=400&width=600",
+    technologies: ["React Native", "Redux", "Material UI"],
     githubUrl: null,
-    liveUrl: null,
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.sigeduca&hl=es_PE',
     isPrivate: true,
   },
-  {
-    title: "Grid de Fiesta Taurinas en JAVA",
-    description:
-      "Grid de Fiesta Taurinas en JAVA, que permite realizar operaciones matematicas en tiempo real. Esta Proyecto fue desarrollado con JavaFX para manejar a los toros matadores y lugares de la fiesta",
-    
-    image: "/assets/taurina.png?height=400&width=600",
-    technologies: ["Java", "JAVAFX", "MYSQL"],
-    githubUrl: "https://github.com/username/cms-api",
-    liveUrl: null,
-    isPrivate: true,
-  },
+  
 ]
 
 const ProjectsSection = () => {

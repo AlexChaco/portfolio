@@ -4,9 +4,21 @@ import { Building, CheckCircle } from "lucide-react";
 
 const experienceData = [
   {
+    company: "Sineryx - Kibalion Enterprise",
+    position: "Desarrollador Mobile (React Native)",
+    period: "Octubre 2025 - Presente",
+    description:
+      "Diseño, desarrollo y despliegue de soluciones digitales para  mobile, asegurando escalabilidad, mantenibilidad y experiencia de usuario consistente.",
+    achievements: [
+      "Desarrollo de aplicaciones móviles en React Native con integración con APIs ",
+      "Uso de Redux para la gestión de estado global y patrones de arquitectura escalables",
+      "Colaboración directa con backend y diseño para garantizar modentidad y escalabilidad",
+    ],
+  },
+  {
     company: "IUVADE SRL",
     position: "Desarrollador Frontend & Mobile (React / React Native)",
-    period: "Febrero 2024 - Presente",
+    period: "Febrero 2024 - Ocutbre 2025",
     description:
       "Diseño, desarrollo y despliegue de soluciones digitales para web y mobile, asegurando escalabilidad, mantenibilidad y experiencia de usuario consistente.",
     achievements: [
