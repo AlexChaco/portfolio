@@ -1,5 +1,5 @@
 "use client"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import ContactForm from "@/components/contact-form"
 import ContactInfo from "@/components/contact-info"
 
@@ -15,7 +15,7 @@ const Contact = () => {
     },
   }
 
-  const itemVariants = {
+  const itemVariants:Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,

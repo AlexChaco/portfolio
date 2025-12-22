@@ -1,5 +1,5 @@
 "use client"
-import { motion } from "framer-motion"
+import { motion, Variant, Variants } from "framer-motion"
 import { Code, Github, Lock, Unlock, Eye } from "lucide-react"
 import Image from "next/image"
 
@@ -9,7 +9,7 @@ const projectsData = [
     title: "Portfolio Personal",
     description:
       "Sitio web personal desarrollado con Next.js y Tailwind CSS. Incluye secciones de experiencia, proyectos y tecnologías.",
-    image: "/assets/portafolio.png?height=400&width=600",
+    image: "/assets/portafolio.png",
     technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     githubUrl: null,
     liveUrl: "www.axcoder.dev",
@@ -19,7 +19,7 @@ const projectsData = [
     title: "App de Sigge Facturacion",
     description:
       "Aplicación mobile para facturación de servicios de la empresa. Permite realizar compras  en tiempo real. Esta Proyecto fue desarrollado con React Native para la empresa IUVADE SRL",
-    image: "/assets/sigge.webp?height=400&width=600",
+    image: "/assets/sigge.webp",
     technologies: ["React Native", "Redux", "React Native Paper", "Material UI"],
     githubUrl: null,
     liveUrl: 'https://play.google.com/store/apps/details?id=com.siggefact&hl=es_419',
@@ -29,7 +29,7 @@ const projectsData = [
     title: "App Sigeduca",
     description:
       "Aplicación para gestionar el proceso de enseñanza de la escuela. Permite gestionar los materiales, asignar alumnos y gestionar las clases. Esta Proyecto fue desarrollado con React Native para la empresa IUVADE SRL",
-    image: "/assets/sigeduca.webp?height=400&width=600",
+    image: "/assets/sigeduca.webp",
     technologies: ["React Native", "Redux", "Material UI"],
     githubUrl: null,
     liveUrl: 'https://play.google.com/store/apps/details?id=com.sigeduca&hl=es_PE',
@@ -50,7 +50,7 @@ const ProjectsSection = () => {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,

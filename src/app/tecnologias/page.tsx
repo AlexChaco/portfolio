@@ -1,5 +1,5 @@
 "use client"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import {
   Code,
   Database,
@@ -59,7 +59,7 @@ const TechnologiesSection = () => {
     },
   }
 
-  const itemVariants = {
+  const itemVariants:Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
