@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, Variants } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -84,7 +84,7 @@ const Contact= () => {
     blur: { scale: 1, boxShadow: "none" }
   }
 
-  const formVariants = {
+  const formVariants:Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
       opacity: 1, 
@@ -97,7 +97,7 @@ const Contact= () => {
     }
   }
 
-  const statusVariants = {
+  const statusVariants:Variants = {
     hidden: { opacity: 0, height: 0, y: -10 },
     visible: { 
       opacity: 1, 

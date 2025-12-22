@@ -1,10 +1,10 @@
 "use client"
 
 import { Mail, Phone } from "lucide-react"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 
 export default function ContactInfo() {
-  const containerVariants = {
+  const containerVariants:Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -15,7 +15,7 @@ export default function ContactInfo() {
     },
   }
 
-  const itemVariants = {
+  const itemVariants:Variants = {
     hidden: { x: -20, opacity: 0 },
     visible: {
       x: 0,
